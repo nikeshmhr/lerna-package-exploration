@@ -7,8 +7,9 @@
   "license": "ISC",
   "main": "dist/main.js",
   "scripts": {
+    "prepack": "rimraf dist && npm run build",
     "build": "webpack",
     "test": "node ./__tests__/package-2.test.js"
   },
-  "gitHead": "54ca43d60f1b857c7fca53cf30bab1db2368d912"
+  "gitHead": "db0b899d86f67f43e7171799f92a28076caa780b"
 }
