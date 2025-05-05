@@ -6,10 +6,11 @@
   "author": "Nikesh Maharjan <nikeshmhr@gmail.com>",
   "license": "ISC",
   "main": "dist/main.js",
+  "private": false,
   "scripts": {
     "prepack": "npm run build",
     "build": "rimraf dist && webpack --mode=production",
     "test": "node ./__tests__/package-2.test.js"
   },
-  "gitHead": "9077def9d6e6d29c419db363be74ff2ec725047f"
+  "gitHead": "9f442df7085feef161ed0384691cec2d6fc08155"
 }
