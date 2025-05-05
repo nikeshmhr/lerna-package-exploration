@@ -11,5 +11,5 @@
     "build": "rimraf dist && webpack --mode=production",
     "test": "node ./__tests__/package-2.test.js"
   },
-  "gitHead": "550729d51453b018e2a83a93ad3be3b51156650b"
+  "gitHead": "9733dca4800400650c9a001fe5f9cc70196c536e"
 }
