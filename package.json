@@ -1,6 +1,6 @@
 {
   "name": "@mnikesh/service-sdk",
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/*"
   ],
