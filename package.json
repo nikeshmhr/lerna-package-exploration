@@ -1,0 +1,14 @@
+{
+  "name": "@mnikesh/service-sdk",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lerna": "lerna"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^8.2.2"
+  }
+}
