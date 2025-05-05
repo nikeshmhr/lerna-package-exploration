@@ -5,19 +5,13 @@
   "keywords": [],
   "author": "Nikesh Maharjan <nikeshmhr@gmail.com>",
   "license": "ISC",
-  "main": "lib/package-1.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
+  "main": "dist/main.js",
   "scripts": {
+    "build": "webpack",
     "test": "node ./__tests__/package-1.test.js"
   },
   "dependencies": {
     "lodash": "^4.17.21"
   },
-  "gitHead": "2bc071cbacf15bb408325e276ebf64849e927a3a"
+  "gitHead": "54ca43d60f1b857c7fca53cf30bab1db2368d912"
 }
