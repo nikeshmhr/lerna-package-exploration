@@ -23,7 +23,7 @@ jobs:
         run: npm ci
       - run: echo "${{github.head_ref}} --- ${{github.sha}}"
       - run: |
-          npm config list
+          cat ${{github.workspace}}/.npmrc
       - name: Lerna publish canary
         run: |
           npm run lerna publish -- \
