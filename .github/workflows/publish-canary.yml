@@ -33,6 +33,7 @@ jobs:
             --preid ${{github.head_ref}} \
             --dist-tag ${{github.sha}} \
             --summary-file
+      - run: ls -al
       - name: Post canary release comment
         uses: actions/github-script@v6
         with:
