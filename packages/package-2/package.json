@@ -15,5 +15,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "4ff895ea668143c8918bde98d81e8d1728eccf63"
+  "gitHead": "4ff895ea668143c8918bde98d81e8d1728eccf63",
+  "dependencies": {
+    "@mnikesh/service-sdk.package-1": "^0.0.10"
+  }
 }
