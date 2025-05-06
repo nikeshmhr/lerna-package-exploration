@@ -33,3 +33,30 @@ jobs:
             --preid ${{github.head_ref}} \
             --dist-tag ${{github.sha}} \
             --summary-file
+      - name: Post canary release comment
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require("fs");
+            let comment = 'No packages were published.';
+            try {
+              const summary = fs.readFileSync("${{github.workspace}}/lerna-publish-summary.json");
+              const summaryJson = JSON.parse(summary);
+              if(summaryJson && summaryJson.length > 0) {
+                comment = "The following packages were published:\n\n";
+                comment += summaryJson.map(item => `- ${item.packageName} (${item.version})`).join("\n");
+              }
+            } catch (err) {
+              console.error("Error reading summary file:", err);
+            }
+
+            try {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: commentBody,
+              });
+            } catch(err) {
+              console.error("Error parsing summary file:", err);
+            }
