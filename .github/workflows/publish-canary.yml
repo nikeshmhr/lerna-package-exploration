@@ -37,16 +37,15 @@ jobs:
       - name: Post canary release comment
         uses: actions/github-script@v6
         with:
+          result-encoding: string
           script: |
             const fs = require("fs");
             let commentBody = 'No packages were published.';
             try {
               const summary = fs.readFileSync("./lerna-publish-summary.json");
               const summaryJson = JSON.parse(summary);
-              if(summaryJson && summaryJson.length > 0) {
-                commentBody = "The following packages were published:\n\n";
-                commentBody += summaryJson.map(item => `- ${item.packageName} (${item.version})`).join("\n");
-              }
+              commentBody = "The following packages were published:\n\n";
+              commentBody += summaryJson.map(item => `- ${item.packageName} (${item.version})`).join("\n");
             } catch (err) {
               console.error("Error reading summary file:", err);
             }
