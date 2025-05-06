@@ -1,0 +1,29 @@
+name: Publish canary
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  publish-canary:
+    runs-on: "ubuntu-latest"
+    name: Publish canary release
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org/"
+          scope: "@mnikesh"
+          token: ${{ secrets.NPM_TOKEN }}
+      - name: Install dependencies
+        run: npm ci
+      - run: echo "${{github}}"
+      # - name: Lerna publish canary
+      #   run: |
+      #     npm run lerna publish -- \
+      #       --yes \
+      #       --canary \
