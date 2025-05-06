@@ -34,6 +34,7 @@ jobs:
             --canary \
             --preid ${{github.head_ref}} \
             --dist-tag ${{github.sha}} \
+            --include-merged-tags \
             --summary-file
       - run: ls -al
       - name: Post canary release comment
