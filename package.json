@@ -1,6 +1,6 @@
 {
   "name": "@mnikesh/service-sdk",
-  "private": false,
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -12,9 +12,5 @@
     "rimraf": "^6.0.1",
     "webpack": "^5.99.7",
     "webpack-cli": "^6.0.1"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
   }
 }
