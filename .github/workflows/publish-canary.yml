@@ -31,4 +31,5 @@ jobs:
             --yes \
             --canary \
             --preid ${{github.head_ref}} \
+            --dist-tag ${{github.sha}} \
             --summary-file
