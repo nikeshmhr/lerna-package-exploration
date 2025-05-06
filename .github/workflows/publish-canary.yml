@@ -8,6 +8,8 @@ on:
 jobs:
   publish-canary:
     runs-on: "ubuntu-latest"
+    permissions:
+      issues: write
     name: Publish canary release
     steps:
       - name: Check out repository code
