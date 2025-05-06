@@ -39,13 +39,13 @@ jobs:
         with:
           script: |
             const fs = require("fs");
-            let comment = 'No packages were published.';
+            let commentBody = 'No packages were published.';
             try {
               const summary = fs.readFileSync("./lerna-publish-summary.json");
               const summaryJson = JSON.parse(summary);
               if(summaryJson && summaryJson.length > 0) {
-                comment = "The following packages were published:\n\n";
-                comment += summaryJson.map(item => `- ${item.packageName} (${item.version})`).join("\n");
+                commentBody = "The following packages were published:\n\n";
+                commentBody += summaryJson.map(item => `- ${item.packageName} (${item.version})`).join("\n");
               }
             } catch (err) {
               console.error("Error reading summary file:", err);
