@@ -9,7 +9,7 @@ jobs:
   publish-canary:
     runs-on: "ubuntu-latest"
     permissions:
-      issues: write
+      pull-requests: write
     name: Publish canary release
     steps:
       - name: Check out repository code
