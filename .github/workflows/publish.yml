@@ -35,4 +35,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: |
-          npm run lerna publish -- --yes --create-release github
+          npm run lerna publish -- --yes --create-release github --conventional-commits
