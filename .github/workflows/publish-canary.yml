@@ -45,12 +45,12 @@ jobs:
           result-encoding: string
           script: |
             const fs = require("fs");
-            let commentBody = 'No packages were published.';
+            let body = 'No packages were published.';
             try {
               const summary = fs.readFileSync("./lerna-publish-summary.json");
               const summaryJson = JSON.parse(summary);
-              commentBody = "The following packages were published:\n\n";
-              commentBody += summaryJson.map(item => `- ${item.packageName} (${item.version})`).join("\n");
+              body = "The following packages were published:\n\n" + 
+                summaryJson.map(i => `- ${i.packageName} (${i.version.substring(0, i.version.indexOf('+'))})`).join("\n");
             } catch (err) {
               console.error("Error reading summary file:", err);
             }
@@ -60,7 +60,7 @@ jobs:
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                body: commentBody,
+                body: body,
               });
             } catch(err) {
               console.error("Error parsing summary file:", err);
