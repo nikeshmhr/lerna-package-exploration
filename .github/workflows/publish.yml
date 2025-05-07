@@ -10,6 +10,7 @@ jobs:
     runs-on: "ubuntu-latest"
     permissions:
       pull-requests: write
+      contents: write
     name: Publish release
     steps:
       - name: Check out repository code
@@ -30,6 +31,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install dependencies
         run: npm ci
-      - name: Lerna publish canary
+      - name: Lerna publish
         run: |
           npm run lerna publish -- --yes
