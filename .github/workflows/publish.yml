@@ -33,4 +33,4 @@ jobs:
         run: npm ci
       - name: Lerna publish
         run: |
-          npm run lerna publish -- --yes
+          npm run lerna publish -- --yes --create-release github
