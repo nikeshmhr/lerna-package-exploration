@@ -32,5 +32,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Lerna publish
+        env:
+          GH_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: |
           npm run lerna publish -- --yes --create-release github
