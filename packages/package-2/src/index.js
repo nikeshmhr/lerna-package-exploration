@@ -7,5 +7,5 @@ module.exports = package2;
 function package2() {
   const message = package1();
   console.log(`message from package 1 => ${message}`);
-  return 'Hello from package2 - Edit 50';
+  return 'Hello from package2 - Edit 60';
 }
