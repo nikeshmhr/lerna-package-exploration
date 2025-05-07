@@ -1,0 +1,31 @@
+name: Publish packages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: "ubuntu-latest"
+    permissions:
+      pull-requests: write
+    name: Publish release
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org/"
+          scope: "@mnikesh"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Lerna publish canary
+        run: |
+          npm run lerna publish -- --yes
