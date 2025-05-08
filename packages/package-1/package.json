@@ -9,6 +9,7 @@
   "scripts": {
     "prepack": "npm run build",
     "build": "rimraf dist && webpack --mode=production",
+    "pretest": "npm run build",
     "test": "node ./__tests__/package-1.test.js"
   },
   "dependencies": {

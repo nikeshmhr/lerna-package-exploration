@@ -1,6 +1,6 @@
 'use strict';
 
-const package2 = require('..');
+const package2 = require('../src');
 const assert = require('assert').strict;
 
 assert.strictEqual(package2(), 'Hello from package2');
