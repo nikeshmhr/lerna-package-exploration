@@ -5,11 +5,8 @@
   "keywords": [],
   "author": "Nikesh Maharjan <nikeshmhr@gmail.com>",
   "license": "ISC",
-  "main": "dist/main.js",
+  "main": "src/main.js",
   "scripts": {
-    "prepack": "npm run build",
-    "build": "rimraf dist && webpack --mode=production",
-    "pretest": "npm run build",
     "test": "node ./__tests__/package-2.test.js"
   },
   "publishConfig": {
