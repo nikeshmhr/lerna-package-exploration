@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/nikeshmhr/lerna-package-exploration/compare/@mnikesh/service-sdk.package-2@0.1.6...@mnikesh/service-sdk.package-2@0.2.0) (2025-05-08)
+
+
+### Features
+
+* add test workflow ([#6](https://github.com/nikeshmhr/lerna-package-exploration/issues/6)) ([7931296](https://github.com/nikeshmhr/lerna-package-exploration/commit/7931296e77b99f248d01e5cbb0549b40b3e980d6))
+
+
+
+
+
 ## [0.1.6](https://github.com/nikeshmhr/lerna-package-exploration/compare/@mnikesh/service-sdk.package-2@0.1.5...@mnikesh/service-sdk.package-2@0.1.6) (2025-05-08)
 
 **Note:** Version bump only for package @mnikesh/service-sdk.package-2
