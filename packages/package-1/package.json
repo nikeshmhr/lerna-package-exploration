@@ -6,7 +6,6 @@
   "author": "Nikesh Maharjan <nikeshmhr@gmail.com>",
   "license": "ISC",
   "main": "dist/main.js",
-  "private": false,
   "scripts": {
     "prepack": "npm run build",
     "build": "rimraf dist && webpack --mode=production",
