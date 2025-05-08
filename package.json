@@ -5,12 +5,12 @@
     "packages/*"
   ],
   "scripts": {
-    "lerna": "lerna"
+    "lerna": "lerna",
+    "build:all": "lerna run build",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "lerna": "^8.2.2",
-    "rimraf": "^6.0.1",
-    "webpack": "^5.99.7",
-    "webpack-cli": "^6.0.1"
+    "rimraf": "^6.0.1"
   }
 }
