@@ -1,0 +1,3 @@
+export const STRING_UTILS_SERVICE_TOKEN = Symbol.for(
+  "STRING_UTILS_SERVICE_TOKEN"
+);
