@@ -2,10 +2,7 @@ import { DynamicModule, Module } from "@nestjs/common";
 import { StringUtilsService } from "./string-utils.service";
 import { STRING_UTILS_SERVICE_TOKEN } from "src/constants";
 
-@Module({
-  providers: [StringUtilsService],
-  exports: [StringUtilsService],
-})
+@Module({})
 export class StringUtilsModule {
   static register(separator: string): DynamicModule {
     return {
