@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/nikeshmhr/lerna-package-exploration/compare/@mnikesh/service-sdk.package-1@0.3.0...@mnikesh/service-sdk.package-1@0.4.0) (2025-06-16)
+
+
+### Features
+
+* update implementations ([#10](https://github.com/nikeshmhr/lerna-package-exploration/issues/10)) ([d4c10a5](https://github.com/nikeshmhr/lerna-package-exploration/commit/d4c10a5b3804de2502a156ba95a107379911d558))
+
+
+
+
+
 # [0.3.0](https://github.com/nikeshmhr/lerna-package-exploration/compare/@mnikesh/service-sdk.package-1@0.2.0...@mnikesh/service-sdk.package-1@0.3.0) (2025-06-16)
 
 
