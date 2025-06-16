@@ -7,7 +7,7 @@ function package1() {
 }
 
 function package1a() {
-  return "Hello from package1a function";
+  return "Hello from package1a function - update 001";
 }
 
 module.exports.package1a = package1a;
