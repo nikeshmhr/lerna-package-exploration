@@ -11,7 +11,7 @@ function package2() {
 }
 
 function package2a() {
-  return "Hello from package2a function";
+  return "Hello from package2a function - update 001";
 }
 
 module.exports.package2a = package2a;
